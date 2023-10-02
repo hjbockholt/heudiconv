@@ -109,6 +109,8 @@ def create_seqinfo(mw: dw.Wrapper, series_files: list[str], series_id: str) -> S
         date=dcminfo.get("AcquisitionDate"),
         series_uid=dcminfo.get("SeriesInstanceUID"),
         time=dcminfo.get("AcquisitionTime"),
+        in_plane_phase_encoding_direction = dcminfo.get("InPlanePhaseEncodingDirection"),
+        acquisition_number = dcminfo.get("AcquisitionNumber"),
     )
 
 
